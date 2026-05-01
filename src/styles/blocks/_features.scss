@@ -1,6 +1,15 @@
 .features {
   background-color: $c-bg;
 
+  @include desktop {
+    position: relative;
+    margin-top: 200px;
+  }
+
+  &__side-label {
+    @include side-label;
+  }
+
   &__container {
     @extend %container;
 

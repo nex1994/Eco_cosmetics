@@ -1,11 +1,29 @@
 .shop {
   background-color: $c-bg;
 
+  @include desktop {
+    position: relative;
+    margin-top: 200px;
+  }
+
+  &__side-label {
+    @include side-label;
+
+    @include desktop {
+      left: 20px;
+    }
+  }
+
   &__container {
     @extend %container;
 
     padding-top: 48px;
     padding-bottom: 48px;
+
+    @include desktop {
+      padding-right: 100px;
+      padding-left: 100px;
+    }
   }
 
   &__title {

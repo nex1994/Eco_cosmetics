@@ -1,11 +1,29 @@
 .powder {
   background-color: $c-bg;
 
+  @include desktop {
+    position: relative;
+    margin-top: 200px;
+  }
+
+  &__side-label {
+    @include side-label;
+
+    @include desktop {
+      top: calc(50% - 140px);
+    }
+  }
+
   &__container {
     @extend %container;
 
     padding-top: 48px;
     padding-bottom: 48px;
+
+    @include desktop {
+      padding-right: 100px;
+      padding-left: 100px;
+    }
   }
 
   &__title {
@@ -18,6 +36,11 @@
     color: $c-green;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+
+    @include desktop {
+      font-size: 36px;
+      line-height: 1.1;
+    }
   }
 
   &__body {
@@ -87,6 +110,11 @@
     letter-spacing: 0;
 
     transition: opacity $transition;
+
+    @include desktop {
+      display: block;
+      margin-top: -100px;
+    }
 
     &:hover {
       opacity: 0.6;

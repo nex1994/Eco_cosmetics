@@ -1,6 +1,33 @@
 .promo {
   background-color: $c-bg;
 
+  @include desktop {
+    margin-top: 200px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45%;
+      height: 45%;
+      border-top: 1px solid #344f1080;
+      border-left: 1px solid #344f1080;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 45%;
+      height: 45%;
+      border-bottom: 1px solid #344f1080;
+      border-right: 1px solid #344f1080;
+    }
+  }
+
   &__container {
     @extend %container;
 
@@ -12,6 +39,32 @@
       padding-bottom: 48px;
       text-align: center;
     }
+
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      height: 380px;
+      text-align: left;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__description {
+    display: none;
+
+    @include desktop {
+      display: block;
+      max-width: 380px;
+
+      font-family: $font-poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: $c-dark;
+    }
   }
 
   &__text {
@@ -22,5 +75,20 @@
     color: $c-green;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+
+    @include tablet {
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    @include desktop {
+      max-width: 380px;
+      margin: 0;
+
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: 0.05em;
+    }
   }
 }

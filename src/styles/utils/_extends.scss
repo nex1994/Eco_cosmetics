@@ -6,6 +6,10 @@
   @include tablet {
     padding: 0 $container-padding-desktop;
   }
+
+  @include desktop {
+    padding: 0 50px;
+  }
 }
 
 %button {
