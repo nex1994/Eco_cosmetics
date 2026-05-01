@@ -1,0 +1,133 @@
+.shop {
+  background-color: $c-bg;
+
+  &__container {
+    @extend %container;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    font-family: $font-poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: $c-green;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__slider {
+    margin-bottom: 24px;
+
+    @include tablet {
+      display: flex;
+      gap: 24px;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    @include tablet {
+      width: 280px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.tabs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid $c-gray;
+
+  &__btn {
+    cursor: pointer;
+
+    margin-bottom: -1px;
+    padding: 0 0 12px;
+    border: none;
+    border-bottom: 2px solid transparent;
+
+    font-family: $font-poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: $c-gray-mid;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    background: none;
+
+    transition: color $transition, border-color $transition;
+
+    &:hover {
+      color: $c-green;
+    }
+
+    &--active {
+      border-bottom-color: $c-dark;
+      color: $c-dark;
+    }
+  }
+}
+
+.product {
+  @include tablet {
+    flex: 1;
+  }
+
+  &--tablet-only {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__image {
+    display: block;
+
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    margin-bottom: 16px;
+
+    object-fit: cover;
+
+    transition: opacity $transition;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  &__name {
+    margin-bottom: 8px;
+
+    font-family: $font-poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: $c-dark;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__price {
+    margin-bottom: 24px;
+
+    font-family: $font-poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: $c-dark;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}

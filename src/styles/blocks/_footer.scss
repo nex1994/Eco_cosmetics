@@ -1,0 +1,101 @@
+.footer {
+  background-color: $c-olive;
+
+  &__container {
+    @extend %container;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+&__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__nav-link {
+    font-family: $font-poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $c-bg;
+    text-decoration: none;
+    letter-spacing: 0;
+
+    transition: opacity $transition;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity $transition;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__social-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__contact-item {
+    font-family: $font-poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $c-bg;
+    letter-spacing: 0;
+  }
+
+  &__contact-link {
+    font-family: $font-poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $c-bg;
+    text-decoration: none;
+    letter-spacing: 0;
+
+    transition: opacity $transition;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__copyright {
+    width: 100%;
+
+    font-family: $font-poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $c-bg;
+    text-align: center;
+    letter-spacing: 0;
+  }
+}
