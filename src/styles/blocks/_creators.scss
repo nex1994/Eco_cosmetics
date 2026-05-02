@@ -27,8 +27,8 @@
     }
 
     @include desktop {
-      justify-content: center;
       gap: 100px;
+      justify-content: center;
       padding-right: 100px;
       padding-left: 100px;
     }
@@ -38,9 +38,9 @@
     display: none;
 
     @include tablet {
+      overflow: hidden;
       display: block;
       flex: 1;
-      overflow: hidden;
       min-height: 440px;
     }
 
@@ -79,9 +79,9 @@
     letter-spacing: 0.05em;
 
     @include desktop {
+      margin-bottom: 30px;
       font-size: 36px;
       line-height: 1.1;
-      margin-bottom: 30px;
     }
   }
 
@@ -107,7 +107,8 @@
   }
 
   &__link {
-    display: block;
+    cursor: pointer;
+    display: inline-block;
 
     margin-bottom: 24px;
 
@@ -119,10 +120,10 @@
     text-decoration: underline;
     letter-spacing: 0;
 
-    transition: opacity $transition;
+    transition: transform $transition;
 
     &:hover {
-      opacity: 0.6;
+      transform: scale(1.05);
     }
   }
 

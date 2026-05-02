@@ -10,7 +10,7 @@
     @include side-label;
 
     @include desktop {
-      left: 20px;
+      left: calc((100% - #{$container-max}) / 2 + 10px);
     }
   }
 
@@ -36,6 +36,11 @@
     color: $c-green;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+
+    @include desktop {
+      font-size: 36px;
+      line-height: 1.1;
+    }
   }
 
   &__slider {
@@ -83,10 +88,13 @@
 
     background: none;
 
-    transition: color $transition, border-color $transition;
+    transition:
+      color $transition,
+      border-color $transition,
+      transform $transition;
 
     &:hover {
-      color: $c-green;
+      transform: scale(1.05);
     }
 
     &--active {
@@ -97,6 +105,14 @@
 }
 
 .product {
+  cursor: pointer;
+
+  transition: transform $transition;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
   @include tablet {
     flex: 1;
   }

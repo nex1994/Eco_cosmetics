@@ -10,11 +10,12 @@
 
   &__image-wrap {
     @include desktop {
-      order: 1;
-      flex: 1;
       overflow: hidden;
-      height: 451px;
+      flex: 1;
       align-self: center;
+      order: 1;
+
+      height: 451px;
       margin-right: 50px;
     }
   }
@@ -47,14 +48,16 @@
     text-align: center;
 
     @include desktop {
-      order: 0;
-      flex: 1;
       display: flex;
+      flex: 1;
       flex-direction: column;
       justify-content: center;
-      text-align: left;
+      order: 0;
+
       padding-top: 60px;
       padding-bottom: 60px;
+
+      text-align: left;
     }
   }
 

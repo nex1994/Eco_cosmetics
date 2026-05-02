@@ -31,7 +31,9 @@
 
   background-color: $c-dark;
 
-  transition: background-color $transition, color $transition;
+  transition:
+    background-color $transition,
+    color $transition;
 
   &:hover {
     color: $c-dark;

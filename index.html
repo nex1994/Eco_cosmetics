@@ -11,18 +11,34 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/svg+xml" href="src/images/favicon.svg" />
     <link rel="stylesheet" href="src/styles/main.scss" />
   </head>
   <body>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-menu__close" type="button" id="menuCloseBtn" aria-label="Close menu">&#x2715;</button>
+      <nav class="mobile-menu__nav">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#shop">Shop</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#contact">Contact</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       <div class="header__container">
-        <button class="header__burger" type="button"
+        <button class="header__burger" type="button" id="burgerBtn"
         aria-label="Open menu">
-          <img
-            class="header__burger-icon"
-            src="src/images/burger.png"
-            alt="Menu"
-          />
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
         </button>
         <a class="header__logo" href="#">
           <img
@@ -225,7 +241,6 @@
       </section>
 
       <section class="features">
-        <p class="features__side-label">help</p>
         <div class="features__container">
           <div class="feature">
             <img
@@ -362,7 +377,12 @@
           </div>
           <div class="footer__right">
             <div class="footer__contact">
-              <p class="footer__contact-item">Ukraine</p>
+              <a
+              class="footer__contact-link"
+              href="https://maps.google.com/?q=Ukraine"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Ukraine</a>
               <a class="footer__contact-link" href="mailto:support.mountain@gmail.com">support.mountain@gmail.com</a>
               <a class="footer__contact-link" href="tel:+380934476839">+380934476839</a>
               <p class="footer__contact-item">Support is available Monday - Friday 9am-6pm</p>
