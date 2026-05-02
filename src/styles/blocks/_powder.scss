@@ -105,13 +105,13 @@
   }
 
   &__link {
+    transform-origin: left center;
+
     font-family: $font-poppins;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.3;
-    transform-origin: left center;
     color: $c-green;
-
     text-decoration: underline;
     letter-spacing: 0;
 
