@@ -10,7 +10,7 @@
     @include side-label;
 
     @include desktop {
-      top: calc(50% - 210px);
+      top: calc(50% - 235px);
       left: calc((100% - #{$container-max}) / 2 + 10px);
     }
   }
@@ -29,6 +29,7 @@
 
     @include desktop {
       padding-right: 100px;
+      padding-bottom: 120px;
       padding-left: 100px;
     }
   }
@@ -52,12 +53,15 @@
 
     @include desktop {
       font-size: 36px;
+      font-weight: 600;
       line-height: 1.1;
+      letter-spacing: 0.05em;
     }
   }
 
   &__text {
-    margin-bottom: 32px;
+    padding-top: 30px;
+    padding-bottom: 20px;
 
     font-family: $font-poppins;
     font-size: 14px;
@@ -65,6 +69,10 @@
     line-height: 1.5;
     color: $c-dark;
     letter-spacing: 0;
+
+    @include desktop {
+      font-size: 16px;
+    }
   }
 
   &__image-wrap {
@@ -74,6 +82,12 @@
       overflow: hidden;
       display: block;
       flex: 1;
+    }
+
+    @include desktop {
+      flex: none;
+      width: 580px;
+      height: 540px;
     }
   }
 
@@ -100,7 +114,7 @@
     width: 100%;
     padding: 8px 0;
     border: none;
-    border-bottom: 1px solid $c-dark;
+    border-bottom: 1px solid $c-gray;
 
     font-family: $font-poppins;
     font-size: 14px;

@@ -10,6 +10,7 @@
     @include side-label;
 
     @include desktop {
+      top: calc(50% - 330px);
       left: calc((100% - #{$container-max}) / 2 + 10px);
     }
   }
@@ -27,7 +28,7 @@
   }
 
   &__title {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 
     font-family: $font-poppins;
     font-size: 24px;
@@ -67,13 +68,11 @@
 .tabs {
   display: flex;
   gap: 24px;
-  margin-bottom: 24px;
-  border-bottom: 1px solid $c-gray;
+  margin-bottom: 62px;
 
   &__btn {
     cursor: pointer;
 
-    margin-bottom: -1px;
     padding: 0 0 12px;
     border: none;
     border-bottom: 2px solid transparent;
@@ -141,7 +140,7 @@
   }
 
   &__name {
-    margin-bottom: 8px;
+    margin-bottom: 13px;
 
     font-family: $font-poppins;
     font-size: 18px;
